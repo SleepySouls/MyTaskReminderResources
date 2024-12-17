@@ -1,0 +1,73 @@
+{
+  "Comment": "Task Notification State Machine",
+  "StartAt": "CheckEventDate",
+  "States": {
+    "CheckEventDate": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:ap-southeast-1:203918871595:function:MyTaskReminder_StartStateMachine",
+      "ResultPath": "$",
+      "Next": "CheckStatus"
+    },
+    "CheckStatus": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.status",
+          "StringEquals": "IfDue",
+          "Next": "TaskClassification"
+        }
+      ]
+    },
+    "TaskClassification": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.EventType",
+          "StringEquals": "Urgent-Important",
+          "Next": "Urgent-ImportantNoti"
+        },
+        {
+          "Variable": "$.EventType",
+          "StringEquals": "Urgent-Unimportant",
+          "Next": "Urgent-UnimportantNoti"
+        },
+        {
+          "Variable": "$.EventType",
+          "StringEquals": "NotUrgent-Important",
+          "Next": "NotUrgent-ImportantNoti"
+        },
+        {
+          "Variable": "$.EventType",
+          "StringEquals": "NotUrgent-Unimportant",
+          "Next": "NotUrgent-UmimportantNoti"
+        }
+      ],
+      "Default": "TaskNotification"
+    },
+    "Urgent-ImportantNoti": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:ap-southeast-1:203918871595:function:Urgent-ImportantNotification",
+      "End": true
+    },
+    "Urgent-UnimportantNoti": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:ap-southeast-1:203918871595:function:Urgent-UnimportantNotification",
+      "End": true
+    },
+    "NotUrgent-ImportantNoti": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:ap-southeast-1:203918871595:function:NotUrgent-UnimportantNotification",
+      "End": true
+    },
+    "NotUrgent-UmimportantNoti": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:ap-southeast-1:203918871595:function:NotUrgent_UnimportantNotification",
+      "End": true
+    },
+    "TaskNotification": {
+      "Type": "Fail",
+      "Error": "NoValidEventTypeError",
+      "Cause": "No valid event type provided"
+    }
+  }
+}

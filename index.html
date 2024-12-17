@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MyTaskReminder</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Simple Modern-looking Event Calendar Plugin">
+    <meta name="keywords" content="jQuery, Plugin, Event, Calendar, EvoCalendar">
+    <meta name="author" content="Edlyn Villegas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="icon" href="favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./evo-calendar/css/evo-calendar.min.css">
+    <link rel="stylesheet" type="text/css" href="./evo-calendar/css/evo-calendar.orange-coral.min.css">
+    <link rel="stylesheet" type="text/css" href="./evo-calendar/css/evo-calendar.midnight-blue.min.css">
+    <link rel="stylesheet" type="text/css" href="./evo-calendar/css/evo-calendar.royal-navy.min.css">
+
+    <link rel="stylesheet" type="text/css" href="./demo/demo.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
+    <script
+      src="https://unpkg.com/react@latest/umd/react.development.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/react-dom@latest/umd/react-dom.development.js"></script>
+    <script
+      src="https://unpkg.com/@mui/material@latest/umd/material-ui.development.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/@babel/standalone@latest/babel.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Fonts to support Material Design -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
+    />
+    <!-- Icons to support Material Design -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+        <header>
+    
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+            <!-- Login  href = ... đó là gắn đường link bên login của AWS -->
+<button id="btnLogin" onclick="window.location.href='https://ap-southeast-12w4m6jrv7.auth.ap-southeast-1.amazoncognito.com/login?client_id=1duc7ln08lpnan5rljppn8d59k&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fd3fcsjxxvfofdi.cloudfront.net%2Flogin.html'" style="width:auto;">Login</button>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+    <!-- TIêu đề -->
+        <div class="header-container clearfix">
+            <h1 class="title" data-go="#top" title="Oh, hi! :)"><span>MyTask</span>Reminder</h1>
+            <!-- <ul>
+                <li data-go="#themes">
+                    <a>Themes</a>
+                </li>
+                <li data-go="#demos">
+                    <a>Demo</a>
+                </li>
+                <li data-go="#usage">
+                    <a>Usage</a>
+                </li>
+                <li data-go="#settings">
+                    <a>Settings</a>
+                </li>
+                <li>
+                    <a href="https://github.com/edlynvillegas/evo-calendar" target="_blank" title="get it on github">Github</a>
+                </li>
+            </ul> -->
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <section id="demos">
+                <div class="section-content">
+                    <p class="section-title --shrt">MyTaskReminder!</p>
+                    <div class="action-buttons">
+                        <p class="section-desc">Never be late</p>
+                        <!-- <button class="btn-action active" data-set-theme="Default">DEFAULT</button> -->
+                        <!-- <button class="btn-action" data-set-theme="Midnight Blue">MIDNIGHT BLUE</button> -->
+                        <!-- <button class="btn-action" data-set-theme="Royal Navy">ROYAL NAVY</button> -->
+                        <!-- <button class="btn-action" data-set-theme="Orange Coral">ORANGE CORAL</button> -->
+                    </div>
+                    <div class="console-log">
+                        <div class="log-content">
+                            <div class="--noshadow" id="demoEvoCalendar"></div>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <!-- <button class="btn-action" id="addBtn">ADD EVENT</button> -->
+                        <button class="btn-action" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            ADD EVENT
+                          </button>
+                        <button class="btn-action" id="removeBtn" disabled>REMOVE EVENT</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+       <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+   -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add events</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" onclick="toggleDropdown()" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Select the task
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" onclick="updateButton('U & I')" href="#">Urgent & Important</a>
+                  <a class="dropdown-item" onclick="updateButton('U & UI')" href="#">Urgent & Unimportant</a>
+                  <a class="dropdown-item" onclick="updateButton('Not U & I')" href="#">Not Urgent & Important</a> 
+                  <a class="dropdown-item" onclick="updateButton('Not U & UI')" href="#">Not Urgent & Unimportant</a>
+                </div>
+                <!-- <input onchange="saveText()" id='timeInput' type="time" id="appt" name="appt"  required /> -->
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Description</span>
+                    </div>
+                    <textarea oninput="saveDescription()" id="descriptionTextarea" class="form-control" aria-label="With textarea"></textarea>
+                </div>
+              
+            </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" id="addBtn" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p class="message">DevOps and Applications </p>
+            <p class="message">FACULTY OF COMPUTER NETWORKS AND COMMUNICATIONS </a></p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="./evo-calendar/js/evo-calendar.min.js"></script>
+    <script src="./demo/demo.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker3').datetimepicker({
+                format: 'LT'
+            });
+        });
+     </script>
+</body>
+</html>
